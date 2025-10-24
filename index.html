@@ -1,22 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reyes' Portfolio</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+  <link rel="icon" href="https://freepngimg.com/thumb/categories/2019.png" type="image/x-icon">
+
+  <style>
+    :root {
+      --navy: #041751;
+      --bg: #f5f7fa;
+      --accent: #c7d2fe;
+      --text: #333;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all 0.25s ease-in-out;
+    }
+
+    nav a:visited {
+      color: #d8b4fe; 
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: rgba(199, 210, 254, 0.2);
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        width: 90%;
+        padding: 1rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <section class="w3-container">
-    <h1>Links to Reyes' work</h1>
+  <section>
+    <h1>Links to Reyes' Work</h1>
     <nav>
       <ul>
-        <li><a href="public/2Q1GRubidiumReyes.html">Q2 1st Graded</a></li>
+        <li><a href="public/2Q1GRubidiumReyes.html">Q2 1st Graded Exercise</a></li>
       </ul>
       <ul>
-        <li><a href="public/Q21NGRUBIDIUMREYES.html">Q2 1st Graded CSS</a></li>
+        <li><a href="public/Q21NGRUBIDIUMREYES.html">Q2 2nd Graded Exercise (CSS)</a></li>
       </ul>
     </nav>
   </section>
+
+  <footer>
+    © 2025 Avisha Marie Fatima P. Reyes • Philippine Science High School – Main Campus
+  </footer>
 </body>
 </html>
-
