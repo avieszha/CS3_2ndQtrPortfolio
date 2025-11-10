@@ -1,0 +1,32 @@
+<h1 id="letter"></h1>
+<p id="result"></p>
+
+<script>
+  // reflection:
+  // this game uses:
+  // - keypress events
+  // - random letter generation
+  // - event.key to detect user input
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let current = "";
+
+  function newLetter() {
+    current = letters[Math.floor(Math.random() * letters.length)];
+    document.getElementById("letter").textContent =
+      "press: " + current;
+  }
+
+  newLetter();
+
+  document.body.onkeypress = function(event) {
+    const pressed = event.key.toUpperCase();
+
+    if (pressed === current) {
+      document.getElementById("result").textContent = "boogsh correct!";
+      newLetter();
+    } else {
+      document.getElementById("result").textContent = "nyenye try again!";
+    }
+  };
+</script>

@@ -1,0 +1,19 @@
+<body>
+  <h1>click anywhere!</h1>
+
+  <script>
+    // reflection:
+    // the line below responds to the click event.
+    // "document.body.onclick = changeColor;"
+    // it "listens" for a click on the whole page and then runs the function.
+
+    document.body.onclick = changeColor;
+
+    function changeColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+  </script>
+</body>

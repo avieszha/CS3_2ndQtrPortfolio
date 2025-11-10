@@ -1,0 +1,31 @@
+<button id="btn">click me</button>
+<div id="rotateBox"
+     style="width:100px; height:100px; background:tomato; margin-top:20px; transition:0.3s;">
+</div>
+<p id="message"></p>
+
+<script>
+  // reflection:
+  // easiest: click event (simple and direct)
+  // trickiest: keypress (uses event object + key values)
+
+  const btn = document.getElementById("btn");
+  btn.onclick = function() {
+    btn.textContent = "you clicked me!";
+  };
+
+  const rotateBox = document.getElementById("rotateBox");
+
+  rotateBox.onmouseover = function() {
+    rotateBox.style.transform = "rotate(20deg)";
+  };
+
+  rotateBox.onmouseout = function() {
+    rotateBox.style.transform = "rotate(0deg)";
+  };
+
+  document.body.onkeypress = function(event) {
+    document.getElementById("message").textContent =
+      "you pressed: " + event.key;
+  };
+</script>

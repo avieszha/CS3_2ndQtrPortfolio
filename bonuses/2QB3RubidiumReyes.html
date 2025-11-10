@@ -1,0 +1,18 @@
+<body>
+  <h2>press any key</h2>
+  <p id="keyDisplay">key pressed: none</p>
+
+  <script>
+    // reflection:
+    // the browser knows what key was pressed using the event object.
+    // specifically: event.key gives the actual key pressed.
+
+    document.body.onkeypress = changeColorPress;
+
+    function changeColorPress(event) {
+      document.body.style.backgroundColor = "royalblue";
+      document.getElementById("keyDisplay").textContent =
+        "key pressed: " + event.key;
+    }
+  </script>
+</body>
